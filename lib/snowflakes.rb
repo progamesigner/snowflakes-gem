@@ -82,7 +82,7 @@ module Snowflakes
     private
 
     def generate(time, id, step)
-      Snowflake.new(time, id << (NODE_BITS) + step)
+      Snowflake.new(time, id << (STEP_BITS) + step)
     end
 
     def waitUntilNextMillisecond(time)
